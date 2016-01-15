@@ -1,0 +1,28 @@
+GIT
+  remote: git://github.com/kurain/ruby_hid_api.git
+  revision: 959abe528e37766d9332a8a26701b5562275dbb1
+  branch: kurain
+  specs:
+    hid_api (0.1.1)
+      ffi (~> 1.9)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    ffi (1.9.10)
+    mackerel-client (0.0.8)
+      faraday (~> 0.9)
+    multipart-post (2.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ffi
+  hid_api!
+  mackerel-client
+
+BUNDLED WITH
+   1.11.2

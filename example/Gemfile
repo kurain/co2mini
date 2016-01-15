@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'mackerel-client'
+gem 'ffi'
+gem 'hid_api', :git => 'git://github.com/kurain/ruby_hid_api.git',  :branch => "kurain"
+

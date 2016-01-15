@@ -1,0 +1,27 @@
+#mackerel
+http://help-ja.mackerel.io/entry/howto/install-agent/deb
+
+#setup
+Mac
+brew install libffi
+
+
+Linux
+sudo apt-get install libhidapi-hidraw0
+sudo apt-get install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev autoconf libc6-dev ncurses-dev automake libtool git libhidapi-hidraw0
+sudo apt-get install ruby2.1 ruby2.1-dev git
+
+#時刻 
+http://polidog.jp/2014/01/08/vagrant/
+
+# 推奨
+sudo apt-get install usbutils
+vim /etc/udev/rules.d/90-co2mini.rules
+
+ACTION=="remove", GOTO="co2mini_end"
+
+SUBSYSTEMS=="usb", KERNEL=="hidraw*", ATTRS{idVendor}=="04d9", ATTRS{idProduct}=="a052", GROUP="plugdev", MODE="0660", SYMLINK+="co2mini%n", GOTO="co2mini_end"
+
+LABEL="co2mini_end"
+
+tail -2 /var/log/co2.tsv
